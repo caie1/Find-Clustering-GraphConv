@@ -1,0 +1,42 @@
+B455: Principles of Machine Learning
+HW5 (Due: Apr. 27 Monday)
+https://iu.instructure.com/courses/1857020
+
+1. (30 pts) Given the following four data points in two dimensions: (-2, -1), (-1, 0),
+(1, 0), (2, 1), a) what is the covariance matrix of these data points? b) compute the
+eigen values and the eigenvectors of the covariant matrix? c) compute the
+principal components of the data points; d) given the labels of three points (-2, 1), (-1,0) and (1, 0) as the positive class, and the label of the point (2, 1) and as the
+negative class, compute the maximum discriminating projection of the data
+according to the linear discriminant analysis (LDA). e) why will not LDA give the
+principal component with the greatest variation?
+2.
+
+(10 pts) Dr. Smart wants to use the principal component analysis (PCA) to embed
+data points in d-dimensions into lower t-dimensions (t < d). He suggested to form
+a t*d principal component matrix P by using the top t principal components with
+the greatest eigenvectors, and rotate each input data point x by this matrix (y=Px).
+The resulting data points will be in t dimensions. Will his method preserve the
+distances between input data points as well as the multi-dimensional scaling
+(MDS) algorithm? Justify your answer.
+
+3. (20 pts) Given the following data points in 2 dimensions: (1, 1), (1.5, 2), (3, 4), (5, 7),
+(3.5, 5), (4.5, 5), (3.5, 4.5), conduct the k-means clustering, starting from the centroids of
+two clusters (k=2) as: (1, 1) and (5, 7). Present the results after each iteration until the
+clustering results converge.
+4. (20 pts) A simplistic intruder detection system for a computer network consists of an
+attempt to categorize users according to (i) the time of day they log in, (ii) the length of
+time they log in for, (iii) the types of programs they run while logged in, (iv) the number
+of programs they run while logged in. Suggest how you would train a SOM and the naïve
+Bayes’ classifier to perform the categorization. What preprocessing of the data would you
+do, how much data would you need, and how large would you make the SOM? Do you
+think that such a system would work for intruder detection?
+5. (20 pts) A bank wants to detect fraudulent credit card transactions. They have data for
+lots and lots of transactions (each transaction is an amount of money, a shop, and the time
+and date) and some information about when credit cards were stolen, and the transactions
+that were performed on the stolen card. Describe how you could use an un-supervised
+learning method to cluster people’s transactions together to identify patterns, so that
+stolen cards can be detected as changes in pattern. How well do you think this would
+work? There is much more data of transactions when cards are not stolen, compared to
+stolen transactions. How does this affect the learning, and what can you do about it?
+
+

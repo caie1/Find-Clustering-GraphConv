@@ -1,0 +1,75 @@
+                    B455: Principles of Machine Learning
+                            HW1 (Due: Jan. 31 Friday 5pm)
+                         https://iu.instructure.com/courses/1857020
+
+
+   1. (Problem 2.1) Use Bayes’ rule to solve the following problem: At a party you
+      meet a person who claims to have been to the same school as you. You vaguely
+      recognize them, but can’t remember properly, so decide to work out the
+      probability that it is the case, given that:
+          a. you vaguely recognize 1 in 2 of the people who went to school with you;
+          b. 1 in 10 of the people at the party went to school with you;
+          c. 1 in 5 people at the party you vaguely recognize.
+
+   2. In some cases of probability-based classification, one wants to classify on
+      minimizing the risk of misclassification. For example, the misclassification of
+      someone sick being healthy should always be avoided, while sometimes, the risk
+      of misclassifying some healthy persons as sick is also high, as the treatment may
+      have significant side effect. The risk of misclassification can be represented by a
+      loss matrix that specifies the risk of misclassifying class Ci as class Cj. Typically,
+      the leading diagonal of loss matrix contains zeros, since there should be no risk
+      for correct prediction. Once the risk matrix is given, we can just extend our
+      classier to output the result with the minimal risk, which multiplies the probability
+      of each outcome by their respective loss number. Given the loss matrix for a
+      classification of a putative liver disease in three classes: {Healthy, Cirrhosis,
+      Liver Cancer} as below:
+                                           Prediction
+                                           H                 C                LC
+      Real              H                  0                 1                5
+                        C                  5                 0                3
+                        LC                 20                10               0
+
+For one patient, the prediction probabilities are P(H) = 0.5, P(C)=0.2, P(LC)=0.3. What
+should be output of the prediction with the minimum risk? Explain your answer.
+
+   3. (Car theft problem) The police department at Bayesville have a theory that the
+      probability of a car is stolen is dependent on three attributes of the car: color (red,
+      yellow or blue), type (sports or family) and origin (domestic or imported). The
+      police department has observed the following ten cases with the car stolen or not.
+
+       No.              Color             Type             Origin             Stolen?
+       1                Red               Sports           Domestic           Yes
+       2                Red               Sports           Domestic           No
+       3                Red               Sports           Domestic           Yes
+       4                Yellow            Sports           Domestic           No
+       5                Yellow            Sports           Imported           Yes
+       6                Yellow           Family            Imported          No
+       7                Yellow           Family            Imported          Yes
+       8                Yellow           Family            Domestic          No
+       9                Red              Family            Imported          No
+       10               Red              Sports            Imported          Yes
+
+Derive a Naïve Bayes model to predict the probability of any car being stolen from its
+attributes, and use the model to compute the probability of a car of the attributes {Red,
+Family, Domestic}.
+
+   4. Modify the EM implementation (see the notebook file EM algorithm.ipynb shared
+      with you on the google drive) to allow for three classes (each following a
+      Gaussian distribution with different mean and standard deviation) in the data. You
+      should modify the code to generate three classes of the data and use the EM
+      algorithm to learn the parameters for the three Gaussian distribution. You should
+      submit your modified implementation in a notebook file through canvas, which
+      should include the implementation as well as a short description of your
+      simulation result.
+   5. Consider a neuron with 2 inputs, 1 output, and a threshold activation function. If
+      the two weights are w1 = 1 and w2 = 1, and the bias is b = 1.5, then what is the
+      output for input (0, 0)? What about for inputs (1, 0), (0, 1), and (1, 1)? Draw the
+      discriminant function for this function, and write down its equation. Does it
+      correspond to any particular logic gate?
+   6. The parity problem returns 1 if the number of inputs (each input is either 1 or 0)
+      that are 1 is even, and 0 otherwise. Can a Perceptron learn this problem for 3
+      inputs? If so, devise such a network. If not, explain why.
+   7. The decision boundary hyperplane found by the Perceptron has equation y(x) =
+      wTx + b = 0. For a point x’, show that the shortest distance (i.e., the geometric
+      margin) from the point to the hyperplane is |y(x’)|/||w||.
+

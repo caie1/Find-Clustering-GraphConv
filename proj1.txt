@@ -1,0 +1,47 @@
+IUB CSCI B455 Spring 2020
+
+Principles of Machine Learning
+
+Project 1
+Due: 11:59pm, february 18.
+
+1
+
+Introduction
+
+In this project, you need to build a Multi-layer Perceptron (MLP) model for a specific dataset to
+do predictions.
+Wine Data Set. These data are the results of a chemical analysis of wines grown in the same
+region in Italy but derived from three different cultivars. The analysis determined the quantities
+of 13 constituents found in each of the three types of wines. Specifically, the attributes are 1)
+Alcohol, 2) Malic acid, 3) Ash, 4) Alcalinity of ash, 5) Magnesium, 6) Total phenols, 7) Flavanoids,
+8) Nonflavanoid phenols, 9) Proanthocyanins, 10) Color intensity, 11) Hue, 12) OD280/OD315 of
+diluted wines, and 13) Proline. Note that all attributes are continuous. For access to the dataset,
+please visit https://archive.ics.uci.edu/ml/datasets/wine. Given a list of attributes, your
+model should output a number in {1, 2, 3} to indicate which type it belongs to.
+Evaluation. To evaluate the effectiveness of your model, you need to compare with the baseline
+prediction model which just randomly outputs one type of wines given attributes. In this project,
+we suggest using 5-fold cross-validation. As a result, you should report two accuracies, one for each
+predicting algorithm.
+5-fold Cross-validation. Randomly divide the training data D into 5 groups with the same size
+say {Di }5i=1 . During each iteration i for i ∈ {1, 2, 3, 4, 5}, select D − Di and Di as training data and
+testing data independently. Finally, output the averaged testing accuracy as the output accuracy
+for a specific predicting model.
+
+2
+
+Submission
+
+You only need to submit one notebook on Canvas before the due date. Fail to do so will make your
+final grade deducted. In the notebook, you should specify your model details. The final report will
+be judged based on the clarity of the report.
+
+3
+
+Collaboration
+
+Note that this is an independent project, which means you are not allowed to make a group.
+However, discussion is allowed. If you have discussed with someone or got any help from others,
+you need to clearly specify their names in acknowledgement.
+
+

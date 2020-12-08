@@ -1,0 +1,46 @@
+B455: Principles of Machine Learning
+HW4 (Due: Apr. 13 Monday)
+https://iu.instructure.com/courses/1857020
+
+1. (15 pts) Devise a decision tree that computes the logical AND function. How
+accurate do you think it is? Can you make a decision that computes the logical
+XOR function perfectly accurate?
+2. (10 pts) When you arrive at the pub, your five friends already have their drinks on
+the table. Jim has a job and buys the round half of the time. Jane buys the round a
+quarter of the time, and Sarah and Simon buy a round one eighth of the time. John
+hasn’t got his wallet out since you met him three years ago. Compute the entropy
+of each of them buying the round and work out how many questions you need to
+ask (on average) to find out who bought the round.
+3. (15 pts) Two more friends now arrive and everybody spontaneously decides that it
+is your turn to buy a round (for all eight of you). Your friends set you the
+challenge of deciding who is drinking beer and who is drinking vodka according
+to their gender (Female: T and Male: F), whether or not they are students, and
+whether they went to the pub last night. Use ID3 to build a decision tree to help
+you decide. What will be the prediction for one of your friends who is a female
+student and did not go to pub last night, based on the decision tree?
+
+4. (20 pts) Modify the decision tree algorithm implemented in maketree.ipynb
+(available at google drive) to use Gini Impurity (instead of information entropy)
+to build decision tree prediction model. You should submit your modified
+implementation in a notebook file through canvas, which should include the
+implementation as well as a short description of your implementation.
+5. (10 pts) Stumping is a simple method to produce multiple predictors for bagging
+ensemble learning, in which each time a single most informative (e.g., measured
+by the entropy gain) feature in a bagging dataset is picked up and used alone for
+prediction. For a binary classification problem this will typically get at least half
+of the dataset correct. Why? How does this statement generalize to multiple
+classes prediction?
+
+6. (20 pts) Implement a random forest predictive model based on the decision tree
+implementation of maketree.ipynb (available at google drive). Adjust the
+parameters of the random forest model (including the number of trees N and the
+number features used in building each tree m) and apply it on the breast cancer
+data set (used in Project 3). You should submit your modified implementation in
+a notebook file through canvas, which should include the implementation as well
+as a short description of result of comparing the performance of your
+implementation with the results from Project II.
+7. (10 pts) Dr. Smart claims one does not need to apply the tree pruning algorithm
+when building each decision tree in the random forest model. Do you think he is
+correct? Justify your answer.
+
+

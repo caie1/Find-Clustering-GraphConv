@@ -1,0 +1,162 @@
+B455: Principles of Machine Learning
+HW3 (Due: Mar. 9 Monday 11:59pm)
+https://iu.instructure.com/courses/1857020
+
+1. A medical expert is going to build up a case-based reasoning system for diagnosis
+tasks. Cases correspond to individual persons where the case problem parts are
+made up of a number of features describing possible symptoms and the solution
+parts represent the diagnosis (classification of disease). The case base contains the
+seven cases provided in the table below.
+Training
+sample
+C1
+C2
+C3
+C4
+
+Fever
+
+Vomiting
+
+Diarrhea
+
+Shivering
+
+Classification
+
+No
+Average
+High
+High
+
+No
+No
+No
+Yes
+
+No
+No
+No
+Yes
+
+No
+No
+Yes
+No
+
+C5
+
+Average
+
+No
+
+Yes
+
+No
+
+C6
+
+No
+
+Yes
+
+Yes
+
+No
+
+C7
+
+Average
+
+Yes
+
+Yes
+
+No
+
+Healthy (H)
+Influenza (I)
+Influenza (I)
+salmonella
+poisoning (S)
+salmonella
+poisoning (S)
+bowel
+inflammation (B)
+bowel
+inflammation (B)
+
+Moreover, the expert has specified a similarity measure reflecting his expertise, using
+local similarity measures and feature weights as specified in the figure below.
+For similarity of Fever (F) between a query (Q) and a case (C)
+Q/C
+High
+Average
+No
+
+High
+1.0
+0.5
+0.0
+
+Average
+0.7
+1.0
+0.3
+
+No
+0.2
+0.8
+1.0
+
+e.g, if a query has No fever and a case has High Fever, their similarity (on the feature of
+fever) is 0.0, whereas if a query has High fever and a case has No Fever, their similarity
+(on the feature of fever) is 0.2.
+For similarity of the other symptoms (V, D and Sh) a query (Q) and a case (C)
+Q/C
+Yes
+No
+
+Yes
+1.0
+0.2
+
+No
+0.0
+1.0
+
+Finally, the weights for the diagnosis, WF=0.3, WV=0.2, WD=0.2, and WSh=0.3.
+(a) Calculate the similarity between all cases from the case base and the query q =
+(high, no, no, no).
+(b) Calculate the similarity between all cases from the case base and the query (?, yes,
+no, yes) where the question mark indicates that the value of the symptom fever
+has not been determined, yet.
+(c) Determine the nearest neighbors in (a) and (b) as well as the diagnosis the system
+outputs, when using the k-NN methods with k = 1.
+2. Mr. Fuzzy claims that if there exists a linear separator that perfectly partition the
+training sample, the K-nearest neighbor method will always output the perfect
+classification in the training samples, if the class of a sample is determined based
+on the k-nearest neighbors in the other samples. Is he correct? If yes, explain your
+answer; otherwise, give a counterexample.
+3. (Problem 8.1) Suppose that the following are a set of points in two classes:
+
+_
+Plot them and find the optimal separating line. What are the support vectors, and what is
+the margin?
+4. For the same data points used in the above question,
+
+1) assuming you are given the support vectors (from the answers of question 3), find
+the support vector machine (SVM) to separate the two classes by computing the
+kernels and solving the constraint equations.
+2) Using the derived SVM to classify a new instance (0, 2) to be in class 1 or class 2.
+5. Apply the SVM implementation (see the notebook SVM.ipynb shared with you on the
+google drive) to the wine dataset (from Project I). You should submit your modified
+implementation in a notebook file through canvas, which should include the
+implementation as well as a short description of result of comparing the performance of
+SVM with MLP.
+6. Can neural networks be employed for sentiment analysis? Devise a neural network model
+to replace the naïve Bayes model for sentiment analysis of movie reviews, and describe
+how such a model can be trained using training corpus. What are the pros and cons of the
+model comparing the naïve Bayes algorithms introduced in the class?
+
+

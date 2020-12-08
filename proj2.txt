@@ -1,0 +1,58 @@
+IUB CSCI B455 Spring 2020
+
+Principles of Machine Learning
+
+Project 2
+Due: 11:59pm, March 1st.
+
+1
+
+Introduction
+
+In this project, you will get familiar with popular Python deep learning packages (e.g., Keras, Tensorflow,
+PyTorch, etc.) and use them to help you build up a model for multi-class classification.
+
+1.1 Dataset
+The dataset we will be working with is CIFAR10 (https://keras.io/datasets/), it consists of 50,000 32*32
+color training images, with 10 different categories (i.e., airplane, automobile, bird, cat, deer, dog, frog,
+horse, ship, and truck). The testing set has 10,000 color images.
+
+1.2 DNN
+For this project, you will need to build up deep neural networks (i.e., network with only fully connected
+neurons) with different hyper-parameters to solve the 10-class classification problem. Your task is to build
+up one baseline DNN model and include two other DNN models with better performance that is fine tuned
+(e.g., changes in number of layers, different activation functions, number of neurons in each layer, etc.). All
+these hyper-parameters should be determined by yourself.
+You also need to determine which optimizer to use, how many neurons in your output layer, and which
+loss function to apply. Be sure to discuss on why you choose these settings in your report. Meanwhile, you
+need to determine what input features to use (e.g., gray scale images, any feature vector, etc.).
+
+2 Deep learning libraries
+You can use any available deep learning libraries (e.g., Keras, Tensorflow, PyTorch, etc.) to help you build
+up the model. However, you should build up the model by yourself, which means that you should not use
+existing code online.
+
+3 Evaluation
+In your report, be sure to include the performance (i.e., accuracy) on the testing set of your baseline DNN
+model and the other two fine-tuned DNN models. The accuracy can be calculated as:
+(number of correctly classified images / total number of images)
+
+Principles of Machine Learning
+
+IUB CSCI B455 Spring 2020
+
+4 Submission
+You need to submit an ipynb file and an exported pdf file with code ready to run and detailed
+annotations. You need to report the performance of the baseline DNN model and the other two finetuned DNN models. Be sure to discuss why you choose these settings (including input features, loss
+functions, optimizer, number of layers, number of neurons in each layer, activation functions) and the
+influence of fine-tuning in your selected hyper-parameters.
+Make sure you submit your work before the submission deadline, late submission will not be accepted.
+Try to write your code clearly so that someone else reading the code can understand it without
+significant effort.
+
+5 Collaboration
+Note that this is an independent project, which means you are not allowed to make a
+group. However, discussion is allowed. If you have discussed with someone or got any help from
+others, you need to clearly specify their names in acknowledgement.
+
+
